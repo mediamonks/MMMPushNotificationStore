@@ -4,8 +4,10 @@ Store incoming push notifications locally in a shared App group on iOS.
 
 ## Installation
 
-```sh
-npm install mmm-push-notification-store
+```json
+"dependencies": {
+    "mmm-push-notification-store": "git+ssh://git@github.com:mediamonks/MMMPushNotificationStore.git"
+}
 ```
 
 ## Usage
@@ -104,21 +106,21 @@ as POJsO - Plain Old JavaScript Objects ;).
 // Notification
 {
     title: String
-	subtitle: String
-	body: String
+    subtitle: String
+    body: String
     badge: Number|null
-	categoryIdentifier: String
-	launchImageName: String
-	threadIdentifier: String
-	attachments: [
+    categoryIdentifier: String
+    launchImageName: String
+    threadIdentifier: String
+    attachments: [
         {
             identifier: String
             url: String
             type: String
         }
-	],
-	userInfo: [String: Any]
-	receivedAt: Date,
+    ],
+    userInfo: [String: Any]
+    receivedAt: Date,
 
     // Only on iOS 12+
     summaryArgument: String,
