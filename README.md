@@ -1,6 +1,9 @@
 # MMMPushNotificationStore
 
-Store incoming push notifications locally in a shared App group on iOS.
+[![Build](https://github.com/mediamonks/MMMPushNotificationStore/actions/workflows/ios.yml/badge.svg)](https://github.com/mediamonks/MMMPushNotificationStore/actions/workflows/ios.yml)
+
+A React Native plugin to store incoming push notifications locally in a shared
+App group on iOS.
 
 ## Installation
 
