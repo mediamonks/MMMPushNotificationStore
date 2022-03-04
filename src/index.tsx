@@ -17,6 +17,6 @@ const MMMPushNotificationStore = NativeModules.MMMPushNotificationStore
       }
     );
 
-export function loadNotifications(groupIdentifier): Promise<Array<Object>> {
+export function loadNotifications(groupIdentifier: string): Promise<Array<Object>> {
   return MMMPushNotificationStore.loadNotifications(groupIdentifier);
 }
