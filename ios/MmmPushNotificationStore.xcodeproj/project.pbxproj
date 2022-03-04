@@ -7,10 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-
-		5E555C0D2413F4C50049A1A2 /* MmmPushNotificationStore.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* MmmPushNotificationStore.m */; };
-		F4FF95D7245B92E800C19C63 /*  MmmPushNotificationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FF95D6245B92E800C19C63 /*  MmmPushNotificationStore.swift */; };
-
+		F4FF95D7245B92E800C19C63 /* MmmPushNotificationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FF95D6245B92E800C19C63 /* MmmPushNotificationStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,12 +23,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		134814201AA4EA6300B7C361 /* libMmmPushNotificationStore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMmmPushNotificationStore.a; sourceTree = BUILT_PRODUCTS_DIR; };
-
+		134814201AA4EA6300B7C361 /* libMMMPushNotificationStore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMMMPushNotificationStore.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3E7B5891CC2AC0600A0062D /* MmmPushNotificationStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MmmPushNotificationStore.m; sourceTree = "<group>"; };
 		F4FF95D5245B92E700C19C63 /* MmmPushNotificationStore-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MmmPushNotificationStore-Bridging-Header.h"; sourceTree = "<group>"; };
 		F4FF95D6245B92E800C19C63 /* MmmPushNotificationStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MmmPushNotificationStore.swift; sourceTree = "<group>"; };
-
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +43,7 @@
 		134814211AA4EA7D00B7C361 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				134814201AA4EA6300B7C361 /* libMmmPushNotificationStore.a */,
+				134814201AA4EA6300B7C361 /* libMMMPushNotificationStore.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,11 +51,9 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
-
 				F4FF95D6245B92E800C19C63 /* MmmPushNotificationStore.swift */,
 				B3E7B5891CC2AC0600A0062D /* MmmPushNotificationStore.m */,
 				F4FF95D5245B92E700C19C63 /* MmmPushNotificationStore-Bridging-Header.h */,
-
 				134814211AA4EA7D00B7C361 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -82,7 +75,7 @@
 			);
 			name = MmmPushNotificationStore;
 			productName = RCTDataManager;
-			productReference = 134814201AA4EA6300B7C361 /* libMmmPushNotificationStore.a */;
+			productReference = 134814201AA4EA6300B7C361 /* libMMMPushNotificationStore.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -99,7 +92,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 58B511D61A9E6C8500147676 /* Build configuration list for PBXProject "MmmPushNotificationStore" */;
+			buildConfigurationList = 58B511D61A9E6C8500147676 /* Build configuration list for PBXProject "MMMPushNotificationStore" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -122,10 +115,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-
 				F4FF95D7245B92E800C19C63 /* MmmPushNotificationStore.swift in Sources */,
-				B3E7B58A1CC2AC0600A0062D /* MmmPushNotificationStore.m in Sources */,
-
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,13 +226,12 @@
 				);
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = MmmPushNotificationStore;
+				PRODUCT_MODULE_NAME = MMMPushNotificationStore;
+				PRODUCT_NAME = MMMPushNotificationStore;
 				SKIP_INSTALL = YES;
-
-				SWIFT_OBJC_BRIDGING_HEADER = "MmmPushNotificationStore-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "MMMPushNotificationStore-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-
 			};
 			name = Debug;
 		};
@@ -257,19 +246,18 @@
 				);
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = MmmPushNotificationStore;
+				PRODUCT_MODULE_NAME = MMMPushNotificationStore;
+				PRODUCT_NAME = MMMPushNotificationStore;
 				SKIP_INSTALL = YES;
-
-				SWIFT_OBJC_BRIDGING_HEADER = "MmmPushNotificationStore-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "MMMPushNotificationStore-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
-
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		58B511D61A9E6C8500147676 /* Build configuration list for PBXProject "MmmPushNotificationStore" */ = {
+		58B511D61A9E6C8500147676 /* Build configuration list for PBXProject "MMMPushNotificationStore" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				58B511ED1A9E6C8500147676 /* Debug */,

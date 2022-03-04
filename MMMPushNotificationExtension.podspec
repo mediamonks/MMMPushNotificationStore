@@ -3,7 +3,7 @@ require "json"
 package = JSON.parse(File.read(File.join(__dir__, "package.json")))
 
 Pod::Spec.new do |s|
-    s.name         = "mmm-push-notification-store"
+    s.name         = "MMMPushNotificationExtension"
     s.version      = package["version"]
     s.summary      = package["description"]
     s.homepage     = package["homepage"]
@@ -13,6 +13,5 @@ Pod::Spec.new do |s|
     s.platforms    = { :ios => "10.0" }
     s.source       = { :git => "https://github.com/mediamonks/mmm-push-notification-store.git", :tag => "#{s.version}" }
 
-	s.source_files = "ios/**/*.{h,m,mm,swift}"
-    s.dependency "React-Core"
+	s.source_files = "extension/**/*.{h,m,mm,swift}"
 end

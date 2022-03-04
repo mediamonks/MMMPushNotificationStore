@@ -1,9 +1,8 @@
 #import <React/RCTBridgeModule.h>
 
-@interface RCT_EXTERN_MODULE(MmmPushNotificationStore, NSObject)
+@interface RCT_EXTERN_MODULE(MMMPushNotificationStore, NSObject)
 
-RCT_EXTERN_METHOD(multiply:(float)a withB:(float)b
-                 withResolver:(RCTPromiseResolveBlock)resolve
+RCT_EXTERN_METHOD(loadNotifications:(NSString *)groupIdentifier withResolver:(RCTPromiseResolveBlock)resolve
                  withRejecter:(RCTPromiseRejectBlock)reject)
 
 @end

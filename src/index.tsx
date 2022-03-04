@@ -6,8 +6,8 @@ const LINKING_ERROR =
   '- You rebuilt the app after installing the package\n' +
   '- You are not using Expo managed workflow\n';
 
-const MmmPushNotificationStore = NativeModules.MmmPushNotificationStore
-  ? NativeModules.MmmPushNotificationStore
+const MMMPushNotificationStore = NativeModules.MMMPushNotificationStore
+  ? NativeModules.MMMPushNotificationStore
   : new Proxy(
       {},
       {
@@ -17,6 +17,6 @@ const MmmPushNotificationStore = NativeModules.MmmPushNotificationStore
       }
     );
 
-export function multiply(a: number, b: number): Promise<number> {
-  return MmmPushNotificationStore.multiply(a, b);
+export function loadNotifications(groupIdentifier): Promise<Array<Object>> {
+  return MMMPushNotificationStore.loadNotifications(groupIdentifier);
 }

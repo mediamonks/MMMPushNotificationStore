@@ -1,13 +1,21 @@
 import * as React from 'react';
 
 import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from 'mmm-push-notification-store';
+import { loadNotifications } from 'mmm-push-notification-store';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
+  const [result, setResult] = React.useState<string | undefined>();
 
   React.useEffect(() => {
-    multiply(3, 7).then(setResult);
+    loadNotifications('group.com.example.mmmpushnotificationstore')
+        .then((result) => {
+            console.log('Notifications: ', result)
+            setResult(JSON.stringify(result))
+        })
+        .catch((error) => {
+            console.log('Notifications error: ', error)
+            setResult(JSON.stringify(error))
+        })
   }, []);
 
   return (
