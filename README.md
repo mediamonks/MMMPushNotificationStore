@@ -71,9 +71,9 @@ Now inside your `NotificationService.swift` file, update all the content so it l
 import UserNotifications
 import MMMPushNotificationExtension
 
-class NotificationService: UNNotificationServiceExtension {
+internal final class NotificationService: UNNotificationServiceExtension {
 
-    override func didReceive(
+    public override func didReceive(
       _ request: UNNotificationRequest,
       withContentHandler contentHandler: @escaping (UNNotificationContent) -> Void
     ) {
@@ -140,6 +140,14 @@ as POJsO - Plain Old JavaScript Objects ;).
 ```
 
 For more info on some of the values, you can have a look at [Apple's documentation](https://developer.apple.com/documentation/usernotifications/unnotificationcontent).
+
+## Caveats
+
+This plugin only stores push notifications that get handled by the notification 
+extension. It's required that the App actually shows the push notification, if you 
+handle the notification with custom UI (avoiding showing the native push 
+notification when the App is open); the extension won't kick in. Please refer
+to the [Apple documentation](https://developer.apple.com/documentation/usernotifications/unnotificationserviceextension#overview).
 
 ## Contributing
 
