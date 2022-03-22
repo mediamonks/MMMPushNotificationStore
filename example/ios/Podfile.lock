@@ -81,9 +81,9 @@ PODS:
     - glog
   - glog (0.3.5)
   - libevent (2.1.12)
-  - mmm-push-notification-store (0.1.0):
+  - mmm-push-notification-store (0.2.0):
     - React-Core
-  - MMMPushNotificationExtension (0.1.0)
+  - MMMPushNotificationExtension (0.2.0)
   - OpenSSL-Universal (1.1.1100)
   - RCTRequired (0.63.4)
   - RCTTypeSafety (0.63.4):
@@ -461,8 +461,8 @@ SPEC CHECKSUMS:
   Folly: b73c3869541e86821df3c387eb0af5f65addfab4
   glog: 40a13f7840415b9a77023fbcae0f1e6f43192af3
   libevent: 4049cae6c81cdb3654a443be001fb9bdceff7913
-  mmm-push-notification-store: 6fa83c049e1914a3a3a80260d4956927594571ef
-  MMMPushNotificationExtension: bda0d854270cd7817fe071bf357b366ef76b5549
+  mmm-push-notification-store: 0c9ef41b2d7b95fce6cad7d2d7d65b81f7b5f234
+  MMMPushNotificationExtension: 872aabcadb8eb9781e498e4635c963bee8647cee
   OpenSSL-Universal: ebc357f1e6bc71fa463ccb2fe676756aff50e88c
   RCTRequired: 082f10cd3f905d6c124597fd1c14f6f2655ff65e
   RCTTypeSafety: 8c9c544ecbf20337d069e4ae7fd9a377aadf504b
@@ -490,4 +490,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 9be67f248003d5a0957441c1f28b32159c203237
 
-COCOAPODS: 1.11.2
+COCOAPODS: 1.11.3

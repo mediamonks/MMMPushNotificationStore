@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import { StyleSheet, View, Text } from 'react-native';
-import { loadNotifications } from 'mmm-push-notification-store';
+import { loadNotifications, clearNotifications } from 'mmm-push-notification-store';
 
 export default function App() {
   const [result, setResult] = React.useState<string | undefined>();
@@ -11,6 +11,12 @@ export default function App() {
         .then((result) => {
             console.log('Notifications: ', result)
             setResult(JSON.stringify(result))
+
+            clearNotifications('group.com.example.mmmpushnotificationstore').then((result) => {
+                console.log('Notifications cleared!')
+            }).catch((error) => {
+                console.log('Notifications clear error: ', error)
+            })
         })
         .catch((error) => {
             console.log('Notifications error: ', error)

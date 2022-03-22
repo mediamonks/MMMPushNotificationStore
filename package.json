@@ -1,6 +1,6 @@
 {
   "name": "mmm-push-notification-store",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Store incoming push notifications locally in a shared App group on iOS",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",

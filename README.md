@@ -94,11 +94,14 @@ This part is way simpler, just import & call `loadNotifications` using the
 identifier we used before.
 
 ```js
-import { loadNotifications } from "mmm-push-notification-store";
+import { loadNotifications, clearNotifications } from "mmm-push-notification-store";
 
 // ...
 
 const result = await loadNotifications("group.com.example.mmmpushnotificationstore");
+
+// Clear notifications:
+const didClear = await clearNotifications("group.com.example.mmmpushnotificationstore");
 ```
 
 The result will be an array of `Notification` objects, these are currently passed
@@ -123,17 +126,17 @@ as POJsO - Plain Old JavaScript Objects ;).
         }
     ],
     userInfo: [String: Any]
-    receivedAt: Date,
+    receivedAt: Number // Double, time interval since 1970, in seconds.
 
     // Only on iOS 12+
-    summaryArgument: String,
-    summaryArgumentCount: Number,
+    summaryArgument: String
+    summaryArgumentCount: Number
 
     // Only on iOS 13+
-    targetContentIdentifier: String,
+    targetContentIdentifier: String
 
     // Only on iOS 15+
-    interruptionLevel: Number,
+    interruptionLevel: Number
     relevanceScore: Number
 }
 

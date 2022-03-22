@@ -20,3 +20,7 @@ const MMMPushNotificationStore = NativeModules.MMMPushNotificationStore
 export function loadNotifications(groupIdentifier: string): Promise<Array<Object>> {
   return MMMPushNotificationStore.loadNotifications(groupIdentifier);
 }
+
+export function clearNotifications(groupIdentifier: string): Promise<boolean> {
+  return MMMPushNotificationStore.clearNotifications(groupIdentifier);
+}

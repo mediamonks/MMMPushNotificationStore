@@ -36,10 +36,35 @@ public final class MMMushNotificationStore: NSObject {
 					reject("2", "Invalid content", StoreError.invalidContent)
 				}
 			} catch {
-				reject("2", "Invalid content", StoreError.invalidContent)
+				reject("3", "Unknown error", error)
 			}
 		} catch {
 			resolve([])
 		}
+    }
+    
+    @objc(clearNotifications:withResolver:withRejecter:)
+    public func clearNotifications(
+        groupIdentifier: String,
+        resolve: RCTPromiseResolveBlock,
+        reject: RCTPromiseRejectBlock
+    ) -> Void {
+        
+        guard let url = FileManager.default.containerURL(
+            forSecurityApplicationGroupIdentifier: groupIdentifier
+        ) else {
+            reject("1", "Invalid group identifier", StoreError.invalidGroupIdentifier)
+            return
+        }
+        
+        let path = url.appendingPathComponent("notifications").appendingPathExtension("json")
+        
+        do {
+            try FileManager.default.removeItem(at: path)
+            
+            resolve(true)
+        } catch {
+            reject("3", "Unknown error", error)
+        }
     }
 }

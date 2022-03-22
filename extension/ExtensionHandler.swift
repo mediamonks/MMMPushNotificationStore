@@ -42,7 +42,7 @@ public final class ExtensionHandler {
 				["url": $0.url, "identifier": $0.identifier, "type": $0.type]
 			},
 			"userInfo": request.content.userInfo,
-			"receivedAt": Date()
+            "receivedAt": Date().timeIntervalSince1970
 		]
 		
 		if #available(iOSApplicationExtension 12.0, *) {
